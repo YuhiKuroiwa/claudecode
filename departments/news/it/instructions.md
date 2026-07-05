@@ -20,7 +20,7 @@
 - 情報源のURLを必ず記録する
 
 ## 出力先
-`departments/news/reports/YYYY-MM/YYYY-MM-DD.md`(月ごとにフォルダを分け、その中に1日1ファイル)
+`departments/news/it/reports/YYYY-MM/YYYY-MM-DD.md`(月ごとにフォルダを分け、その中に1日1ファイル)
 
 ## 出力フォーマット
 - ラベルと本文は改行して分ける(同じ行に詰め込まない)
