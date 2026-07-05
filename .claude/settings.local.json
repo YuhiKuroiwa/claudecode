@@ -1,8 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "WebFetch(domain:www.drivendata.org)",
-      "WebFetch(domain:www.kaggle.com)"
-    ]
-  }
-}
