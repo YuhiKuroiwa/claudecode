@@ -17,9 +17,12 @@
   - `departments/soccer/players/olise/instructions.md` の規定に従い、Michael Oliseの次戦予定・新着トピックを調査 → `departments/soccer/players/olise/reports/YYYY-MM/YYYY-MM-DD.md`
   - それぞれの作成結果を `management/logs/YYYY-MM/YYYY-MM-DD.md` に追記し、まとめて git commit & push する
 - **作成日**: 2026-07-05
+- **push先ブランチ**: `claude/daily-reports`(`main`への直接pushは権限エラーになるため)。`main`への取り込みは人間側(ローカルの`git merge`)で定期的に行う
 - **更新日**:
   - 2026-07-05: soccer/olise部門を追加、3ベース構成に変更
-  - 2026-07-06: 初回自動実行(2026-07-06 08:06 JST)が60分でタイムアウトし、push失敗(コミットなし)。原因は歯止め(検索回数上限・サブエージェント禁止)がプロンプトに無かったため深追いしたと推定。プロンプトに「サブエージェント禁止」「1ベースあたりWebSearch/WebFetch計8回程度まで」「完走優先」を追加
+  - 2026-07-06: 初回自動実行(2026-07-06 08:06 JST)が失敗。実行ログを見るとタイムアウトではなく**リポジトリのclone時点でGitHub認証エラー**だった(当時リポジトリがPrivateで、クラウド環境の書き込み権限が未設定だったため)
+  - 2026-07-06: リポジトリをPublicに変更(中身に機密情報が無いことを確認済み)。再実行するとclone/検索/レポート作成/コミットまでは成功したが、今度は**push時に403エラー**(`main`への直接pushは`claude/`接頭辞ブランチ以外禁止という仕様、および書き込み権限そのものが未設定だったことが複合)
+  - 2026-07-06: 根本解決のため `gh` CLI・Node.js・Claude Code CLIをローカルにインストールし、GitHub Personal Access Tokenで`gh auth login`後、`claude` CLIで`/web-setup`を実行してGitHubの書き込み権限をclaude.aiアカウントに同期。プロンプトも push先を`claude/daily-reports`ブランチに変更。これで自動実行→push成功を確認(2026-07-06 実行分より正常動作)
 - **備考**: 無人実行のため、許可ツールに含まれる操作は確認プロンプトなしに自動実行される
 
 ## コンテスト発見部門(手動実行のみ、自動ルーティンなし)
