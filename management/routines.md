@@ -17,7 +17,9 @@
   - `departments/soccer/players/olise/instructions.md` の規定に従い、Michael Oliseの次戦予定・新着トピックを調査 → `departments/soccer/players/olise/reports/YYYY-MM/YYYY-MM-DD.md`
   - それぞれの作成結果を `management/logs/YYYY-MM/YYYY-MM-DD.md` に追記し、まとめて git commit & push する
 - **作成日**: 2026-07-05
-- **更新日**: 2026-07-05(soccer/olise部門を追加、3ベース構成に変更)
+- **更新日**:
+  - 2026-07-05: soccer/olise部門を追加、3ベース構成に変更
+  - 2026-07-06: 初回自動実行(2026-07-06 08:06 JST)が60分でタイムアウトし、push失敗(コミットなし)。原因は歯止め(検索回数上限・サブエージェント禁止)がプロンプトに無かったため深追いしたと推定。プロンプトに「サブエージェント禁止」「1ベースあたりWebSearch/WebFetch計8回程度まで」「完走優先」を追加
 - **備考**: 無人実行のため、許可ツールに含まれる操作は確認プロンプトなしに自動実行される
 
 ## コンテスト発見部門(手動実行のみ、自動ルーティンなし)
