@@ -14,8 +14,11 @@
 - `management/routines.md` : 自動実行ルーティンの設定内容・変更履歴(claude.ai側の設定はここに無いので記録用)
 
 ## 日々のやり取りの流れ
-- **朝の挨拶(「こんにちは」等)を受けたら**: `git fetch` → `origin/claude/daily-reports` を `main` にmerge → push。その後、「ブログを更新したい場合は『今日のブログを更新しましょう』と言ってください」の一言を添える
+- **朝の挨拶(「こんにちは」等)を受けたら**: `git fetch` → `origin/claude/daily-reports` を `main` にmerge → push。その後、以下2点を一言ずつ添える
+  1. 「ブログを更新したい場合は『今日のブログを更新しましょう』と言ってください」
+  2. 手動実行のみの部門(現時点: `contests`(Kaggle)、`shogi`)について、今日実行するか聞く
   - 自動ルーティンは `main` に直接pushできないため、`claude/daily-reports` ブランチに溜まる。人間(またはこの会話)が定期的にmergeする必要がある
+  - 手動実行のみの部門は増える可能性があるので、`management/routines.md` の「手動実行のみ」の部門一覧を都度確認して聞くこと(このリストをここに固定で書き写さない)
 - **「今日のブログを更新しましょう」と言われたら**: その日の `departments/news/it` と `departments/news/business` のレポート内「ブログ候補」を確認し、おすすめ1つ+他の候補(質問ツールで自由入力も選べる形)を提示する。選ばれたトピックで `departments/blog/instructions.md` → `departments/editorial/instructions.md` の順に実行し、記事を確定する。**投稿(noteへのアップロード)は都度ユーザーが手動で行う**
 
 ## 注意事項
