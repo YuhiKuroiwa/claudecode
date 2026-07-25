@@ -4,8 +4,8 @@
 
 ## 構成
 - `departments/` : 各部門。部門ごとに `instructions.md`(職務規定)と成果物(`reports/`や`posts/`)を持つ
-  - `news/it`, `news/business` : 毎朝自動実行(ニュース調査)
-  - `soccer/players/olise` : 毎朝自動実行(選手ウォッチ)
+  - `news/it`, `news/business` : 毎朝自動実行(ニュース調査)、**2026-07-25時点で一時停止中**(`management/routines.md`参照)
+  - `soccer/players/olise` : 毎朝自動実行(選手ウォッチ)、**2026-07-25時点で一時停止中**(同上、ニュースと同じルーティンの一部)
   - `contests` : 手動実行(Kaggle/DrivenDataのコンペ発見)
   - `shogi` : 手動実行(関東圏の将棋大会・定例会情報)
   - `blog` : 手動実行(noteに投稿する解説記事の作成)
@@ -18,6 +18,7 @@
   1. 「ブログを更新したい場合は『今日のブログを更新しましょう』と言ってください」
   2. 手動実行のみの部門(現時点: `contests`(Kaggle)、`shogi`)について、今日実行するか聞く
   - 自動ルーティンは `main` に直接pushできないため、`claude/daily-reports` ブランチに溜まる。人間(またはこの会話)が定期的にmergeする必要がある
+  - **ルーティン自体が2026-07-25時点で一時停止中**なので、merge時に新着が無いのは正常(`management/routines.md`参照)。再開の指示があればRemoteTriggerで`enabled: true`に戻す
   - 手動実行のみの部門は増える可能性があるので、`management/routines.md` の「手動実行のみ」の部門一覧を都度確認して聞くこと(このリストをここに固定で書き写さない)
 - **「今日のブログを更新しましょう」と言われたら**: その日の `departments/news/it` と `departments/news/business` のレポート内「ブログ候補」を確認し、おすすめ1つ+他の候補(質問ツールで自由入力も選べる形)を提示する。選ばれたトピックで `departments/blog/instructions.md` → `departments/editorial/instructions.md` の順に実行し、記事を確定する。**投稿(noteへのアップロード)は都度ユーザーが手動で行う**
 
