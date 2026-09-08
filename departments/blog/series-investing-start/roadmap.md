@@ -16,3 +16,4 @@
 | なぜ投資をするのか(貯金との違い、インフレと預金金利) | `posts/2026-09/2026-09-06-why-invest.md` |
 | 証券口座の選び方(主要ネット証券5社比較) | `posts/2026-09/2026-09-07-choosing-a-brokerage.md` |
 | 新NISAのつみたて投資枠と成長投資枠の違い | `posts/2026-09/2026-09-08-nisa-tsumitate-vs-growth.md` |
+| iDeCoの基本(新NISAとの違い) | `posts/2026-09/2026-09-09-ideco-basics.md` |
