@@ -17,3 +17,4 @@
 | 証券口座の選び方(主要ネット証券5社比較) | `posts/2026-09/2026-09-07-choosing-a-brokerage.md` |
 | 新NISAのつみたて投資枠と成長投資枠の違い | `posts/2026-09/2026-09-08-nisa-tsumitate-vs-growth.md` |
 | iDeCoの基本(新NISAとの違い) | `posts/2026-09/2026-09-09-ideco-basics.md` |
+| 税金の基本(特定口座・一般口座の違い、源泉徴収あり・なし、確定申告が必要なケース) | `posts/2026-09/2026-09-10-tokutei-ippo-kouza-tax.md` |
