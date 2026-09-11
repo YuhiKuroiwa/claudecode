@@ -19,3 +19,4 @@
 | iDeCoの基本(新NISAとの違い) | `posts/2026-09/2026-09-09-ideco-basics.md` |
 | 税金の基本(特定口座・一般口座の違い、源泉徴収あり・なし、確定申告が必要なケース) | `posts/2026-09/2026-09-10-tokutei-ippo-kouza-tax.md` |
 | インデックス投資とは(投資信託との関係、アクティブファンドとの違い) | `posts/2026-09/2026-09-11-index-investing.md` |
+| ETF(上場投資信託)とは(投資信託との違い、価格の決まり方、NISAでの扱い) | `posts/2026-09/2026-09-12-etf-vs-toshishintaku.md` |
